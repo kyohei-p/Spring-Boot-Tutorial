@@ -15,6 +15,27 @@ java -jar target/demo-0.0.1-SNAPSHOT.jar
 jar tvf target/demo-0.0.1-SNAPSHOT.jar.original
 ```
 
+# docker構築
+## dockerイメージ構築
+```
+docker compose build --no-cache
+```
+
+## コンテナ作成・起動（バックグラウンド実行）
+```
+docker compose up -d
+```
+
+## コンテナに入る
+```
+docker compose exec app bash
+```
+
+## コンテナ上でアプリケーション実行（Maven使用する場合）
+```
+docker compose exec app mvn spring-boot:run
+```
+
 ## バージョン確認
 name|version
 --|--
