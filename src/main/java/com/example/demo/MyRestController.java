@@ -1,0 +1,57 @@
+// package com.example.demo;
+
+// import org.springframework.web.bind.annotation.RequestMapping;
+// import org.springframework.web.bind.annotation.RestController;
+
+// @RestController
+// @RequestMapping("/users")
+// public class MyRestController {
+
+//   private final User user;
+  
+//   public MyRestController(User user) {
+//     this.User = user;
+//   }
+
+//   @getMapping("/{userId}")
+//   public User getUser(@PathVariable Long userId) {
+//     return this.user.findById(userId).get();
+//   }
+// }
+// import java.util.List;
+
+// import org.springframework.web.bind.annotation.DeleteMapping;
+// import org.springframework.web.bind.annotation.GetMapping;
+// import org.springframework.web.bind.annotation.PathVariable;
+// import org.springframework.web.bind.annotation.RequestMapping;
+// import org.springframework.web.bind.annotation.RestController;
+
+// @RestController
+// @RequestMapping("/users")
+// public class MyRestController {
+
+// 	private final UserRepository userRepository;
+
+// 	private final CustomerRepository customerRepository;
+
+// 	public MyRestController(UserRepository userRepository, CustomerRepository customerRepository) {
+// 		this.userRepository = userRepository;
+// 		this.customerRepository = customerRepository;
+// 	}
+
+// 	@GetMapping("/{userId}")
+// 	public User getUser(@PathVariable Long userId) {
+// 		return this.userRepository.findById(userId).get();
+// 	}
+
+// 	@GetMapping("/{userId}/customers")
+// 	public List<Customer> getUserCustomers(@PathVariable Long userId) {
+// 		return this.userRepository.findById(userId).map(this.customerRepository::findByUser).get();
+// 	}
+
+// 	@DeleteMapping("/{userId}")
+// 	public void deleteUser(@PathVariable Long userId) {
+// 		this.userRepository.deleteById(userId);
+// 	}
+
+// }
