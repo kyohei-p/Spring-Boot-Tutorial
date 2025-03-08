@@ -44,9 +44,21 @@
 // 		return this.userRepository.findById(userId).get();
 // 	}
 
+// Mono: 0個または1個の要素を非同期的に返す場合
+// 	@GetMapping("/{userId}")
+// 	public Mono<User> getUser(@PathVariable Long userId) {
+// 		return this.userRepository.findById(userId);
+// 	}
+
 // 	@GetMapping("/{userId}/customers")
 // 	public List<Customer> getUserCustomers(@PathVariable Long userId) {
 // 		return this.userRepository.findById(userId).map(this.customerRepository::findByUser).get();
+// 	}
+
+// Flux: 0個以上の要素を非同期的に返す場合
+// 	@GetMapping("/{userId}/customers")
+// 	public Flux<Customer> getUserCustomers(@PathVariable Long userId) {
+// 		return this.userRepository.findById(userId).map(this.customerRepository::findByUser);
 // 	}
 
 // 	@DeleteMapping("/{userId}")
