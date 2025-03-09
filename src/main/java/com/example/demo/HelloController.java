@@ -1,19 +1,20 @@
-package com.example.demo;
+// RouterFunctionを使用するため、コメントアウト
+// package com.example.demo;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-// import org.springframework.web.bind.annotation.RestController;
+// import org.springframework.stereotype.Controller;
+// import org.springframework.web.bind.annotation.GetMapping;
+// // import org.springframework.web.bind.annotation.RestController;
 
-// @RestController
-@Controller
-public class HelloController {
+// // @RestController
+// @Controller
+// public class HelloController {
 
-    @GetMapping("/")
-    // public String hello() {
-    //     return "Hell, World!";
-    // }
+//     @GetMapping("/")
+//     // public String hello() {
+//     //     return "Hell, World!";
+//     // }
 
-    public String index() {
-        return "index";
-    }
-}
+//     // public String index() {
+//     //     return "index";
+//     // }
+// }
